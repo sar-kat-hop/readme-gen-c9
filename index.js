@@ -44,9 +44,11 @@ const questions = [
             ## Installation 
             ${answers.installation}
 
-            ## ${answers.contributions}
+            ## Contributions
+            ${answers.contributions}
 
-            ## ${answers.license}
+            ## License 
+            ${answers.license}
         `;
 
             fs.writeFile('README.md', data, (err) => {
