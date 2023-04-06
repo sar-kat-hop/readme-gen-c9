@@ -1,13 +1,17 @@
-# Easy ReadMe
+# l
 
-## About            
-A simple Node app that generates a readme.md file in markdown format using Inquirer to gather information from the user.  It's meant to hopefully streamline the process of writing a readme for new devs, especially.
+  ## About
+  s
 
-## Installation 
-To use this app, simply download the repo and launch your terminal from the root folder. Type `npm install` to install the required node modules. Then, run the app from your  terminal  with `npm run start`.
+  ## Installation
+  f
 
-## Contributions
-The creation of this app relied heavily on the Inquirer docs at https://www.npmjs.com/package/inquirer and on the course materials.
+  ## Contributions
+  s
 
-## License 
-MIT
+  ## License
+
+Licensed under [MIT](https://opensource.org/licenses/MIT).
+([![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)).
+ 
+

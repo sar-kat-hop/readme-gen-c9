@@ -1,7 +1,7 @@
 {
   "name": "static-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "## About             A simple Node app that generates a readme.md file in markdown format using Inquirer to gather information from the user.  It's meant to hopefully streamline the process of writing a readme for new devs, especially.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,5 +15,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sar-kat-hop/readme-gen-c9.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/sar-kat-hop/readme-gen-c9/issues"
+  },
+  "homepage": "https://github.com/sar-kat-hop/readme-gen-c9#readme"
 }

@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { generateMarkdown } = require('./utils'); 
+const generateMarkdown = require('./utils/generateMarkdown');
 
 function init() {
 // TODO: Create an array of questions for user input
@@ -35,16 +35,15 @@ const questions = [
     }
 ];
 
-inquirer.prompt(questions).then((answers) => {
-    console.log('Your answers: ', answers);
-
-    const data = generateMarkdown(answers);
-    
-    fs.writeFile('README.md', data, (err) => {
-        if(err) throw err;
-        console.log('README.md saved.');
+    inquirer.prompt(questions).then((answers) => {
+        const data = generateMarkdown(answers);
+        
+            fs.writeFile('README.md', data, (err) => {
+                if(err) throw err;
+                console.log('README.md saved.');
+            });
     });
-});
+};
 
 //  const data = `# ${answers.title}
 
@@ -66,7 +65,7 @@ inquirer.prompt(questions).then((answers) => {
 //                 console.log('README.md saved successfully.');
 //             });
 //     });
-};
+// };
 
 // Function call to initialize app
 init();

@@ -34,13 +34,14 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
+
 function renderLicenseSection(license) {
-  if (license === 'MIT' || 'Apache 2.0' || 'GPL 3.0') {
+  if (license === 'MIT' || license === 'Apache 2.0' || license === 'GPL 3.0') {
     return `## License
-    [${answers.license}]
-    (${renderLicenseBadge(answers.license)})  
-    (${renderLicenseLink(answers.license)})
-    `;
+
+Licensed under [${license}](${renderLicenseLink(license)}).
+(${renderLicenseBadge(license)}).
+`
 
   } else {
     return '';
@@ -49,6 +50,7 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
+
   return `# ${answers.title}
 
   ## About
@@ -60,7 +62,7 @@ function generateMarkdown(answers) {
   ## Contributions
   ${answers.contributions}
 
-  ${renderLicenseSection(answers)} 
+  ${renderLicenseSection(answers.license)} 
 
 `;
 };
