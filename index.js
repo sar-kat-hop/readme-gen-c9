@@ -1,8 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown'); //note to self: don't enclose importing function in { }
 
+// opted to wrap everything in init fxn instead of having it separate
 function init() {
 // TODO: Create an array of questions for user input
 
@@ -36,36 +37,16 @@ const questions = [
 ];
 
     inquirer.prompt(questions).then((answers) => {
+        //call generateMarkdown
         const data = generateMarkdown(answers);
         
+        //write to README.md file
             fs.writeFile('README.md', data, (err) => {
                 if(err) throw err;
                 console.log('README.md saved.');
             });
     });
 };
-
-//  const data = `# ${answers.title}
-
-// ## About            
-// ${answers.about}
-
-// ## Installation 
-// ${answers.installation}
-
-// ## Contributions
-// ${answers.contributions}
-
-// ## License 
-// ${answers.license}
-// `;
-
-//             fs.writeFile('README.md', data, (err) => {
-//                 if (err) throw err;
-//                 console.log('README.md saved successfully.');
-//             });
-//     });
-// };
 
 // Function call to initialize app
 init();

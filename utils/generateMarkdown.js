@@ -34,7 +34,6 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-
 function renderLicenseSection(license) {
   if (license === 'MIT' || license === 'Apache 2.0' || license === 'GPL 3.0') {
     return `## License
@@ -53,18 +52,17 @@ function generateMarkdown(answers) {
 
   return `# ${answers.title}
 
-  ## About
-  ${answers.about}
+## About
+${answers.about}
 
-  ## Installation
-  ${answers.installation}
+## Installation
+${answers.installation}
 
-  ## Contributions
-  ${answers.contributions}
+## Contributions
+${answers.contributions}
 
-  ${renderLicenseSection(answers.license)} 
-
+${renderLicenseSection(answers.license)} 
 `;
 };
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown; //not to self: do not include ( ) at end
