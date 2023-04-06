@@ -35,21 +35,20 @@ const questions = [
 ];
 
     inquirer.prompt(questions).then((answers) => {
-        const data = `
-            # ${answers.title}
+        const data = `# ${answers.title}
 
-            ## About            
-            ${answers.about}
+## About            
+${answers.about}
 
-            ## Installation 
-            ${answers.installation}
+## Installation 
+${answers.installation}
 
-            ## Contributions
-            ${answers.contributions}
+## Contributions
+${answers.contributions}
 
-            ## License 
-            ${answers.license}
-        `;
+## License 
+${answers.license}
+`;
 
             fs.writeFile('README.md', data, (err) => {
                 if (err) throw err;
