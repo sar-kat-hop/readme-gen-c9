@@ -35,8 +35,7 @@ const questions = [
 ];
 
     inquirer.prompt(questions).then((answers) => {
-        const data = `
-# ${answers.title}
+        const data = `# ${answers.title}
 
 ## About            
 ${answers.about}
