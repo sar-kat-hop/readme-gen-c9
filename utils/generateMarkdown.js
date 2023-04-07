@@ -39,7 +39,8 @@ function renderLicenseSection(license) {
     return `## License
 
 Licensed under [${license}](${renderLicenseLink(license)}).
-(${renderLicenseBadge(license)}).
+
+${renderLicenseBadge(license)}
 `
 
   } else {
@@ -58,8 +59,18 @@ ${answers.about}
 ## Installation
 ${answers.installation}
 
-## Contributions
+## Usage
+${answers.usage}
+
+
+## Contributing
 ${answers.contributions}
+
+## Tests
+${answers.tests}
+
+## Questions
+${answers.questions}
 
 ${renderLicenseSection(answers.license)} 
 `;
