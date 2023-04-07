@@ -10,27 +10,53 @@ function init() {
 const questions = [
     {
         name: 'title',
-        message: 'What is the title of your app?',
+        message: '(Title) What is the title of your app?',
         type: 'input',
     },
     {
         name: 'about',
-        message: 'Describe the purpose and functionality of your app:',
+        message: '(About) Describe the purpose and functionality of your app:',
         type: 'input',
     },
     {
         name: 'installation',
-        message: 'How do you install or use your app? If it has been deployed, include a link to the deployment. (Installation section)',
+        message: '(Installation) How do you install your app?',
+        type: 'input',
+    },
+    {
+        name: 'usage',
+        message: '(Usage) How do you use your app?',
+        type: 'input',
+    },
+        // commented out code below is for possible future functionality
+    // {
+    //     name: 'demoLink',
+    //     message: 'If you have a link to a walkthrough/demo video, enter it here: ',
+    //     type: 'input',
+    // },
+    // {
+    //     name: 'deployLink',
+    //     message: 'Is your app deployed anywhere? Include a link here if applicable:',
+    //     type: 'input',
+    // },
+    {
+        name: 'tests',
+        message: '(Tests) What are the instructions, if any, for testing the app?',
         type: 'input',
     },
     {
         name: 'contributions',
-        message: 'Describe any contributions made or resources used to create your app:',
+        message: '(Contributing) Describe any contributions made or resources used to create your app:',
+        type: 'input',
+    },
+    {
+        name: 'questions',
+        message: '(Questions) How can people reach you if they have questions?',
         type: 'input',
     },
     {
         name: 'license',
-        message: 'How is your app licensed?',
+        message: '(License) How is your app licensed?',
         type: 'list',
         choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'N/A'],
     }
