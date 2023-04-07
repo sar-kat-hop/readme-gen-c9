@@ -28,6 +28,12 @@ const questions = [
         message: '(Usage) How do you use your app?',
         type: 'input',
     },
+        // commented out code below is for possible future functionality
+    // {
+    //     name: 'demoLink',
+    //     message: 'If you have a link to a walkthrough/demo video, enter it here: ',
+    //     type: 'input',
+    // },
     // {
     //     name: 'deployLink',
     //     message: 'Is your app deployed anywhere? Include a link here if applicable:',
